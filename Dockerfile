@@ -5,5 +5,5 @@ RUN apk add --no-cache wget && \
     unzip sonar-scanner-${SONAR_SCANNER_VERSION} && \
     cd /usr/bin && ln -s /sonar-scanner-${SONAR_SCANNER_VERSION}/bin/sonar-scanner sonar-scanner && \
     apk del wget
-ENTRYPOINT sonar-scanner
+CMD sonar-scanner
 
